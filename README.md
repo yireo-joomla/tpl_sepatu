@@ -8,4 +8,14 @@ to the look&feel of Bootstrap, a basic Sepatu-setup already looks good.
 
 Features
 ========
-@todo
+- Twitter Bootstrap (from /media/jui)
+- Development based on LESS-files
+- Support for less.js and PHP LESS-library
+- Google Fonts
+- Fort Awesome integrated
+- Flexible module-positions
+
+Todo
+====
+- Implement http://leafo.net/lessphp/
+- Styling of breadcrumbs, search, mainmenu
