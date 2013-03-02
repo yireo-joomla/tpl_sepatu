@@ -1,4 +1,13 @@
 <?php
+/**
+ * Joomla! template Sepatu
+ *
+ * @author Yireo (info@yireo.com)
+ * @copyright Copyright 2013
+ * @license GNU Public License
+ * @link http://www.yireo.com
+ */
+
 defined('_JEXEC') or die;
 
 class SepatuTemplateHelper
