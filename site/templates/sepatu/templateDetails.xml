@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>sepatu</name>
+	<creationDate>February 2013</creationDate>
+	<author>Jisse Reitsma</author>
+	<authorEmail>info@yireo.com</authorEmail>
+	<copyright>Copyright (C) 2013 Yireo. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>TPL_SEPATU_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>less</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>navbar</position>
+		<position>logo</position>
+		<position>mainmenu</position>
+		<position>topmenu</position>
+		<position>breadcrumbs</position>
+		<position>top-a-1</position>
+		<position>top-a-2</position>
+		<position>top-a-3</position>
+		<position>top-a-4</position>
+		<position>top-b-1</position>
+		<position>top-b-2</position>
+		<position>top-b-3</position>
+		<position>top-b-4</position>
+		<position>top-hero</position>
+		<position>top-c-1</position>
+		<position>top-c-2</position>
+		<position>top-c-3</position>
+		<position>top-c-4</position>
+		<position>top-d-1</position>
+		<position>top-d-2</position>
+		<position>top-d-3</position>
+		<position>top-d-4</position>
+		<position>content-a-1</position>
+		<position>content-a-2</position>
+		<position>content-a-3</position>
+		<position>content-a-4</position>
+		<position>content-b-1</position>
+		<position>content-b-2</position>
+		<position>content-b-3</position>
+		<position>content-b-4</position>
+		<position>content-c-1</position>
+		<position>content-c-2</position>
+		<position>content-c-3</position>
+		<position>content-c-4</position>
+		<position>content-d-1</position>
+		<position>content-d-2</position>
+		<position>content-d-3</position>
+		<position>content-d-4</position>
+		<position>content-hero</position>
+		<position>bottom-a-1</position>
+		<position>bottom-a-2</position>
+		<position>bottom-a-3</position>
+		<position>bottom-a-4</position>
+		<position>bottom-b-1</position>
+		<position>bottom-b-2</position>
+		<position>bottom-b-3</position>
+		<position>bottom-b-4</position>
+		<position>bottomcontent-a-1</position>
+		<position>bottomcontent-a-2</position>
+		<position>bottomcontent-a-3</position>
+		<position>bottomcontent-a-4</position>
+		<position>bottomcontent-b-1</position>
+		<position>bottomcontent-b-2</position>
+		<position>bottomcontent-b-3</position>
+		<position>bottomcontent-b-4</position>
+		<position>footer-a-1</position>
+		<position>footer-a-2</position>
+		<position>footer-a-3</position>
+		<position>footer-a-4</position>
+		<position>footer-b-1</position>
+		<position>footer-b-2</position>
+		<position>footer-b-3</position>
+		<position>footer-b-4</position>
+		<position>debug</position>
+		<position>copyright</position>
+	</positions>
+
+</extension>

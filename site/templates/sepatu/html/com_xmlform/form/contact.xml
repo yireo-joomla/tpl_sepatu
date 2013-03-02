@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="form">
+        <fieldset name="user" label="Your Details">
+            <field name="company" type="texti" size="160" default="" label="Company" labelclass="control-label" />
+            <field name="name" type="texti" size="160" default="" label="Name" labelclass="control-label" />
+            <field name="email" type="texti" size="160" default="" label="Email" labelclass="control-label" />
+        </fieldset>
+        <fieldset name="inquiry" label="Your Inquiry" description="Enter below the details of your inquiry">
+            <field name="topic" type="list" default="contact" label="Topic" labelclass="control-label">
+                <option value="magento-performance-insight">Magento Performance Insight</option>
+                <option value="custom">Custom Optimization Work</option>
+                <option value="other">Other topic</option>
+            </field>
+            <field name="topic_other" type="text" size="160" default="" label="Other topic" labelclass="control-label" description="If your inquiry does not match the list above, just describe it here." />
+            <field name="url" type="text" size="160" default="" label="Magento Store URL" labelclass="control-label" description="The URL of the Magento store in question" />
+            <field name="comment" type="textarea" rows="10" cols="60" default="" label="Your inquiry" labelclass="control-label" />
+        </fieldset>
+    </fields>
+</form>

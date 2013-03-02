@@ -1,0 +1,5 @@
+site/*
+!site/templates/
+
+site/templates/*
+!site/templates/sepatu/
