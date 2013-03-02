@@ -2,23 +2,25 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site">
 	<name>sepatu</name>
-	<creationDate>February 2013</creationDate>
+	<creationDate>March 2013</creationDate>
 	<author>Jisse Reitsma</author>
 	<authorEmail>info@yireo.com</authorEmail>
 	<copyright>Copyright (C) 2013 Yireo. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0.0</version>
-	<description>TPL_SEPATU_XML_DESCRIPTION</description>
+	<version>1.0.1</version>
+	<description>TPL_SEPATU_DESC</description>
 
 	<files>
-		<folder>less</folder>
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
-		<folder>language</folder>
+		<folder>less</folder>
+		<folder>layout</folder>
 		<filename>index.html</filename>
 		<filename>index.php</filename>
+		<filename>helper.php</filename>
+		<filename>module_rows.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 
@@ -89,5 +91,24 @@
 		<position>debug</position>
 		<position>copyright</position>
 	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_sepatu.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_sepatu.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="css_output" label="TPL_SEPATU_FIELD_CSS_OUTPUT" type="list" default="less_js">
+					<option value="css">TPL_SEPATU_FIELD_CSS_OUTPUT_OPTION_CSS</option>
+					<option value="css_min">TPL_SEPATU_FIELD_CSS_OUTPUT_OPTION_CSS_MIN</option>
+					<option value="less_js">TPL_SEPATU_FIELD_CSS_OUTPUT_OPTION_LESS_JS</option>
+					<option value="less_php">TPL_SEPATU_FIELD_CSS_OUTPUT_OPTION_LESS_PHP</option>
+					<option value="less_exec">TPL_SEPATU_FIELD_CSS_OUTPUT_OPTION_LESS_EXEC</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 
 </extension>

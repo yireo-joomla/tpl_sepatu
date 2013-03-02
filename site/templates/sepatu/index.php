@@ -1,4 +1,13 @@
 <?php
+/**
+ * Joomla! template Sepatu
+ *
+ * @author Yireo (info@yireo.com)
+ * @copyright Copyright 2013
+ * @license GNU Public License
+ * @link http://www.yireo.com
+ */
+
 defined('_JEXEC') or die;
 
 // Fetch the application
@@ -9,14 +18,10 @@ JHtml::_('jquery.framework');
 
 // Load the template-helper
 include_once 'helper.php';
+$helper = new SepatuTemplateHelper($this->params);
 
 // Google Fonts
 $googleFonts = array('Titillium+Web', 'Oxygen');
-
-// Custom variables
-$urlAccount = JRoute::_('index.php?option=com_magebridge&view=root&request=customer/account');
-$urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout/cart');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +29,10 @@ $urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout
     <meta charset="utf-8">
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <?php echo Sepatu::getGoogleFonts($googleFonts); ?>
-    <?php echo Sepatu::getStylesheets(); ?>
+    <?php echo $helper->getGoogleFonts($googleFonts); ?>
+    <?php echo $helper->getStylesheets(); ?>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
-    <?php echo Sepatu::getScripts(); ?>
+    <?php echo $helper->getScripts(); ?>
 </head>
 <body>
 
@@ -46,12 +51,12 @@ $urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout
 </div>
 <?php endif; ?>
     
-<?php if (Sepatu::countModules('top-a') || Sepatu::countModules('top-b')) : ?>
+<?php if ($helper->countModules('top-a') || $helper->countModules('top-b')) : ?>
 <div id="top-wrapper" class="container-fluid container-body">
     <div class="row-fluid">
         <div class="span12">
-            <?php $positionPrefix = 'top-a'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'top-b'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'top-a'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'top-b'; include 'layout/module_rows.php'; ?>
         </div>
     </div>
 </div>
@@ -75,12 +80,12 @@ $urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout
 </div>
 <?php endif; ?>
 
-<?php if (Sepatu::countModules('top-c') || Sepatu::countModules('top-d')) : ?>
+<?php if ($helper->countModules('top-c') || $helper->countModules('top-d')) : ?>
 <div id="top-wrapper" class="container-fluid container-body">
     <div class="row-fluid">
         <div class="span12">
-            <?php $positionPrefix = 'top-c'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'top-d'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'top-c'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'top-d'; include 'layout/module_rows.php'; ?>
         </div>
     </div>
 </div>
@@ -102,10 +107,10 @@ $urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout
             </div>
             <?php endif; ?>
 
-            <?php $positionPrefix = 'content-a'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'content-b'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'content-c'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'content-d'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'content-a'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'content-b'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'content-c'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'content-d'; include 'layout/module_rows.php'; ?>
 
             <div class="container-fluid">
                 <div class="row-fluid">
@@ -118,34 +123,34 @@ $urlCart = JRoute::_('index.php?option=com_magebridge&view=root&request=checkout
     </div>
 </div>
 
-<?php if (Sepatu::countModules('bottom-a') || Sepatu::countModules('bottom-b')) : ?>
+<?php if ($helper->countModules('bottom-a') || $helper->countModules('bottom-b')) : ?>
 <div id="bottom-wrapper" class="container-fluid container-body">
     <div class="row-fluid">
         <div class="span12">
-            <?php $positionPrefix = 'bottom-a'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'bottom-b'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'bottom-a'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'bottom-b'; include 'layout/module_rows.php'; ?>
         </div>
     </div>
 </div>
 <?php endif; ?>
 
-<?php if (Sepatu::countModules('bottomcontent-a') || Sepatu::countModules('bottomcontent-b')) : ?>
+<?php if ($helper->countModules('bottomcontent-a') || $helper->countModules('bottomcontent-b')) : ?>
 <div id="bottomcontent-wrapper" class="container-fluid container-body">
     <div class="row-fluid">
         <div class="span12">
-            <?php $positionPrefix = 'bottomcontent-a'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'bottomcontent-b'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'bottomcontent-a'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'bottomcontent-b'; include 'layout/module_rows.php'; ?>
         </div>
     </div>
 </div>
 <?php endif; ?>
 
-<?php if (Sepatu::countModules('footer-a') || Sepatu::countModules('footer-b')) : ?>
+<?php if ($helper->countModules('footer-a') || $helper->countModules('footer-b')) : ?>
 <div id="footer-wrapper" class="container-fluid container-body">
     <div class="row-fluid">
         <div class="span12">
-            <?php $positionPrefix = 'footer-a'; include 'module_rows.php'; ?>
-            <?php $positionPrefix = 'footer-b'; include 'module_rows.php'; ?>
+            <?php $positionPrefix = 'footer-a'; include 'layout/module_rows.php'; ?>
+            <?php $positionPrefix = 'footer-b'; include 'layout/module_rows.php'; ?>
         </div>
     </div>
 </div>
